@@ -1,8 +1,9 @@
 # About
 
 Simple HTTP server to serve static files.
-This is the one and only purpose.
-Don't use this for production.
+
+* This is the one and only purpose.
+* Don't use it for production.
 
 ## Build
 	
