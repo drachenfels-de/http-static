@@ -5,9 +5,10 @@ Simple HTTP server to serve static files.
 * This is the one and only purpose.
 * Don't use it for production.
 
-## Build
-	
-	make
+## Install
+
+	go get github.com/Drachenfels-GmbH/http-static
+	go install github.com/Drachenfels-GmbH/http-static
 
 ## Usage
 
