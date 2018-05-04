@@ -21,11 +21,13 @@ type MyResponseWriter struct {
 
 func (m *MyResponseWriter) WriteHeader(code int) {
 	log.Println(code, http.StatusText(code))
+	m.ResponseWriter.Header().Set("Access-Control-Allow-Origin", "*")
 	if m.Config.Debug {
 		if err := m.ResponseWriter.Header().Write(os.Stdout); err != nil {
 			fmt.Fprintln(os.Stderr, err.Error())
 		}
 	}
+	m.ResponseWriter.WriteHeader(code)
 }
 
 func loggingMiddleware(cfg *Config, next http.Handler) http.Handler {
